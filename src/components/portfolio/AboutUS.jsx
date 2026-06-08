@@ -9,8 +9,8 @@ const highlights = [
 
 export function About() {
   return (
-    <section id="about" className="py-24 px-4 sm:px-6">
-      <div className="max-w-6xl mx-15 grid lg:grid-cols-2 gap-12 items-center">
+    <section id="about" className="lg:py-24 py-3 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-6xl lg:mx-15 sm:mx-auto grid lg:grid-cols-2 gap-12 items-center">
         <div>
           <p className="text-sm font-semibold uppercase tracking-widest text-[#000000] mb-3">About me</p>
           <h2 className="text-4xl sm:text-5xl font-bold leading-tight">
