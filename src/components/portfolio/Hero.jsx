@@ -38,7 +38,7 @@ export function Hero() {
             </Button>
           </div>
 
-          <div className="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-6">
+          <div className="mt-10 grid grid-cols-3 sm:grid-cols-4 gap-3">
             {stats.map((s) => (
               <div key={s.label} >
                 <div className="text-2xl sm:text-3xl font-bold text-[#000000]">{s.value}</div>
