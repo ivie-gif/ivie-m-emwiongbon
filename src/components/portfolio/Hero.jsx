@@ -54,11 +54,9 @@ export function Hero() {
 
         {/* Portrait + floating chips */}
         <div className="relative h-full sm:h-[600px]">
-          <div className="absolute inset-0 bg-[#ffffff] rounded-[3rem] blur-3xl opacity-30" />
+          <div className="absolute inset-0 bg-[#0D82FE] rounded-[3rem] blur-2xl opacity-30" />
           <div className="absolute inset-0 flex items-end justify-center rounded-[3rem] p-4">
-            <img src={portrait} alt="Portrait" 
-             className="h-full w-full border-0 outline-none box-shadow-none rounded" 
-             style={{ boxShadow: "0 0 20px rgba(0,0,0,0.1)" }} />
+            <img src={portrait} alt="Portrait" className="h-full w-full object-contain" />
           </div>
 
           {/* <FloatingCard className="top-4 left-0 sm:left-4 animate-float bg-[#0D82FE]">
