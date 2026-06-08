@@ -28,7 +28,7 @@ export function Skills() {
   const isMobile = useIsMobile();
   return (
     <section id="skills" className={isMobile ? "py-10 sm:px-6" : "py-24 px-4 sm:px-6"}>
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-7xl mx-auto">
         <div className="text-center mb-14">
           <p className="text-sm font-semibold uppercase tracking-widest text-[#000000] mb-3">
             Toolkit

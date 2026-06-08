@@ -79,7 +79,7 @@ export function Projects() {
   const isMobile = useIsMobile();
   return (
     <section id="projects" className={isMobile ? "py-10 sm:px-6" : "py-24 px-4 sm:px-6"}>
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-7xl mx-auto"> 
         <div className="flex flex-wrap items-end justify-between gap-6 mb-12">
           <div>
             <p className="text-sm font-semibold uppercase tracking-widest text-[#000000] mb-3">Selected work</p>

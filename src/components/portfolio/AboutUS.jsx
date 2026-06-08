@@ -11,9 +11,10 @@ const highlights = [
 export function About() {
   const isMobile = useIsMobile();
   return (
-    <section id="about" className={isMobile ? "lg:py-24 py-10 lg:px-8" : "lg:py-24 py-3 px-4 lg:px-8"}>
-      <div className="max-w-6xl lg:mx-15 sm:mx-auto grid lg:grid-cols-2 gap-12 items-center">
-        <div>
+    <section id="about" className={isMobile ? "py-10 sm:px-6" : "py-24 px-4 sm:px-6"}>
+      <div className="max-w-7xl mx-auto ">
+      <div className="max-w-7xl sm:mx-auto grid lg:grid-cols-2 gap-12 items-center">
+         <div>
           <p className="text-sm font-semibold uppercase tracking-widest text-[#000000] mb-3">About me</p>
           <h2 className="text-4xl sm:text-5xl font-bold leading-tight">
             A software engineer obsessed with <span className="text-[#0D82FE]">shipping value</span>.
@@ -29,6 +30,7 @@ export function About() {
             maintenance and support costs and I love translating mock-ups into polished, performant
             interfaces.
           </p>
+        {/* </div> */}
         </div>
 
         <ul className="grid sm:grid-cols-2 gap-4">
@@ -39,6 +41,7 @@ export function About() {
             </li>
           ))}
         </ul>
+      </div>
       </div>
     </section>
   );

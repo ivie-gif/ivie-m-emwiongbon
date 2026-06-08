@@ -5,12 +5,13 @@ import { useIsMobile } from "../../hooks/use-mobile";
 export function Contact() {
   const isMobile = useIsMobile();
   return (
-    <section id="contact" className={isMobile ? "lg:py-24 py-10 -mx-6" : "lg:py-24 py-3 px-4 lg:px-8"}>
-      <div className="w-full relative overflow-hidden rounded-[2.5rem] p-8 sm:p-14 bg-[rgba(255,255,255,0.5)] text-[#000000]">
+    <section id="contact" className={isMobile ? "lg:py-24 py-10" : "lg:py-24 py-3 px-4"}>
+      {/* <div className="w-full relative overflow-hidden rounded-[2.5rem] p-8 sm:p-14 bg-[rgba(255,255,255,0.5)] text-[#000000]"> */}
+         <div className="max-w-7xl mx-auto">
         <div className="absolute top-0 right-0 w-80 h-80 rounded-full" />
         <div className="absolute bottom-0 left-0 w-80 h-80 rounded-full " />
 
-        <div className="relative items-center">
+        <div className={isMobile ? "relative items-center" : "px-4 relative items-center"}>
           <div>
             <p className="text-sm font-semibold uppercase tracking-widest text-[#000000]/80 mb-3">Let's talk</p>
             <h2 className="text-4xl sm:text-5xl font-bold leading-tight">
