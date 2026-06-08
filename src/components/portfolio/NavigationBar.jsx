@@ -1,4 +1,5 @@
 import { Button } from "@mui/material";
+;
 // import { useMediaQuery } from "@mui/material";
 
 const links = [
@@ -7,6 +8,13 @@ const links = [
   { href: "#skills", label: "Skills" },
   { href: "#contact", label: "Contact" },
 ];
+
+// @media (max-width: 640px) {
+//   .hidden {
+//     display: none;
+//   }
+// }  
+
 
 export function Navbar() {
 // const {  md: isMd } = useMediaQuery();
@@ -18,7 +26,7 @@ export function Navbar() {
           <span className="grid place-items-center w-8 h-8 rounded-lg bg-[#0D82FE] text-white font-bold text-sm">IME</span>
           <span className="font-semibold tracking-tight text-sm md:block">Ivie Maryann Emwiongbon</span>
         </a>
-        <ul className={ " flex items-center gap-1 ml-2"}>
+        <ul className=" flex items-center gap-1 ml-2">
           {links.map((l) => (
             <li key={l.href}>
               <a href={l.href} className="px-3 py-2 rounded-full text-sm text-muted-foreground hover:text-foreground hover:bg-secondary transition-colors">
