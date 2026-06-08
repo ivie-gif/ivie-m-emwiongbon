@@ -1,9 +1,11 @@
-import { Button, TextField } from "@mui/material";
-import { EmailRounded, LinkedIn, GitHub, ArrowForwardRounded } from "@mui/icons-material";
+import { Button } from "@mui/material";
+import { EmailRounded, LinkedIn, GitHub } from "@mui/icons-material";
+import { useIsMobile } from "../../hooks/use-mobile";
 
 export function Contact() {
+  const isMobile = useIsMobile();
   return (
-    <section id="contact" className="py-24  sm:px-6">
+    <section id="contact" className={isMobile ? "lg:py-24 py-10 -mx-6" : "lg:py-24 py-3 px-4 lg:px-8"}>
       <div className="w-full relative overflow-hidden rounded-[2.5rem] p-8 sm:p-14 bg-[rgba(255,255,255,0.5)] text-[#000000]">
         <div className="absolute top-0 right-0 w-80 h-80 rounded-full" />
         <div className="absolute bottom-0 left-0 w-80 h-80 rounded-full " />
@@ -43,7 +45,7 @@ export function Contact() {
         </div>
       </div>
 
-      <footer className="max-w-6xl mx-auto mt-12 flex flex-wrap items-center justify-between gap-4 text-sm text-muted-foreground">
+      <footer className={isMobile ? "lg:max-w-6xl mx-auto mt-12 flex flex-wrap items-center justify-between gap-4 text-sm text-muted-foreground" : "max-w-6xl mx-auto mt-12 flex flex-wrap items-center justify-between gap-4 text-sm text-muted-foreground"}>
         <span>© {new Date().getFullYear()} Ivie Maryann Emwiongbon . All rights reserved.</span>
       </footer>
     </section>

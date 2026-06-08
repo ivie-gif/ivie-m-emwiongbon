@@ -1,4 +1,5 @@
 import { CheckCircleRounded } from "@mui/icons-material";
+import { useIsMobile } from "../../hooks/use-mobile";
 
 const highlights = [
   "Frontend architecture & reusable component systems",
@@ -8,8 +9,9 @@ const highlights = [
 ];
 
 export function About() {
+  const isMobile = useIsMobile();
   return (
-    <section id="about" className="lg:py-24 py-3 px-4 sm:px-6 lg:px-8">
+    <section id="about" className={isMobile ? "lg:py-24 py-10 lg:px-8" : "lg:py-24 py-3 px-4 lg:px-8"}>
       <div className="max-w-6xl lg:mx-15 sm:mx-auto grid lg:grid-cols-2 gap-12 items-center">
         <div>
           <p className="text-sm font-semibold uppercase tracking-widest text-[#000000] mb-3">About me</p>

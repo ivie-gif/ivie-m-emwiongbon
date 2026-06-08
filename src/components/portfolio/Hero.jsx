@@ -1,6 +1,7 @@
 import { Button, Chip } from "@mui/material";
 import { ArrowForwardRounded, DownloadRounded, BoltRounded, CodeRounded, RocketLaunchRounded, AccountTreeRounded } from "@mui/icons-material";
 import portrait from "../../assets/hero-portrait2.png";
+import { useIsMobile } from "../../hooks/use-mobile";
 
 const stats = [
   { value: "4+", label: "Years exp", color: "#0D82FE" },
@@ -10,8 +11,11 @@ const stats = [
 ];
 
 export function Hero() {
+  const isMobile = useIsMobile();
+
+
   return (
-    <section id="top" className="relative pt-32 pb-20 px-4 sm:px-6 overflow-hidden">
+    <section id="top" className={isMobile ? "relative pt-32 overflow-hidden" : "relative pt-32 pb-20 px-4 overflow-hidden"}>
       <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
         <div className="relative">
           <div className="inline-flex items-center gap-2 glass rounded-full pl-2 pr-4 py-1.5 mb-6 shadow-card">
@@ -38,7 +42,7 @@ export function Hero() {
             </Button>
           </div>
 
-          <div className="mt-10 grid grid-cols-3 sm:grid-cols-4">
+          <div className={isMobile ? "gap-5 flex flex-row mt-10" : "mt-10 grid grid-cols-3 sm:grid-cols-4"}>
             {stats.map((s) => (
               <div key={s.label} >
                 <div className="text-2xl sm:text-3xl font-bold text-[#000000]">{s.value}</div>
